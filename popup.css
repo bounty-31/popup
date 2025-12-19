@@ -1,0 +1,185 @@
+/* Popup Banner */
+:root {
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1
+}
+.popup_banner {
+  position: relative;
+   z-index: 10;
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: all .5s ease-in;
+}
+
+.popup_banner .et_pb_row {
+  position: relative;
+}
+
+.popup_banner .close-btn {
+  background: #d32f2f;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 99;
+}
+
+.popup_banner .close-btn:hover {
+  background: #b71c1c;
+}
+
+#main-content {
+    z-index: 99;
+    position: relative;
+}
+
+.animate__animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.popup_banner.triggered {
+    opacity: 1;
+}
+
+@-webkit-keyframes bounceInUp {
+
+    0%,
+    60%,
+    75%,
+    90%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0) scaleY(5);
+        transform: translate3d(0, 3000px, 0) scaleY(5)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0) scaleY(.9);
+        transform: translate3d(0, -20px, 0) scaleY(.9)
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0) scaleY(.95);
+        transform: translate3d(0, 10px, 0) scaleY(.95)
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0) scaleY(.985);
+        transform: translate3d(0, -5px, 0) scaleY(.985)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+@keyframes bounceInUp {
+
+    0%,
+    60%,
+    75%,
+    90%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0) scaleY(5);
+        transform: translate3d(0, 3000px, 0) scaleY(5)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0) scaleY(.9);
+        transform: translate3d(0, -20px, 0) scaleY(.9)
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0) scaleY(.95);
+        transform: translate3d(0, 10px, 0) scaleY(.95)
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0) scaleY(.985);
+        transform: translate3d(0, -5px, 0) scaleY(.985)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.animate__bounceInUp {
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp
+}
+
+@-webkit-keyframes bounceOutDown {
+    20% {
+        -webkit-transform: translate3d(0, 10px, 0) scaleY(.985);
+        transform: translate3d(0, 10px, 0) scaleY(.985)
+    }
+
+    40%,
+    45% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0) scaleY(.9);
+        transform: translate3d(0, -20px, 0) scaleY(.9)
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 2000px, 0) scaleY(3);
+        transform: translate3d(0, 2000px, 0) scaleY(3)
+    }
+}
+
+@keyframes bounceOutDown {
+    20% {
+        -webkit-transform: translate3d(0, 10px, 0) scaleY(.985);
+        transform: translate3d(0, 10px, 0) scaleY(.985)
+    }
+
+    40%,
+    45% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0) scaleY(.9);
+        transform: translate3d(0, -20px, 0) scaleY(.9)
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 2000px, 0) scaleY(3);
+        transform: translate3d(0, 2000px, 0) scaleY(3)
+    }
+}
+
+.animate__bounceOutDown {
+    -webkit-animation-name: bounceOutDown;
+    animation-name: bounceOutDown;
+}
